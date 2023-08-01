@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: global-database-config
+data:
+  database.properties: |
+    database.url=https://mydatabaseserver.somewhere.com:3306
+    database.password=P@SSW0rd1
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: global-configs
+data:
+  SPRING_PROFILES_ACTIVE: production-microservice
